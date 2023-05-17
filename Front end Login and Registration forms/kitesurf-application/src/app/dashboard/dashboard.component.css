@@ -1,0 +1,191 @@
+.header, #navigation{
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    margin: 0;
+    font-size: 50px;
+    font-family: 'Caveat';
+}
+
+.header-right{
+    display: flex;
+    gap: 10px;
+}
+
+.btn-primary{
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+.image{
+    width: 30px;
+    height: 25px;
+}
+
+.toggler{
+    right: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    background-color: lightgray;
+}
+
+#togglerSpot::before, #togglerFavourite::before, #togglerProfile::before{
+    content: "";
+    position: absolute;
+    bottom: 95%;
+    margin-left: 40%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #F5F5F5 transparent;
+}
+
+form, .menu-opened{
+    background-color: #F5F5F5;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+form{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    row-gap: 15px;
+    padding: 20px;
+}
+
+#inputCountry{
+    grid-column: 2 / 3;
+    grid-row: 1;
+}
+
+#inputWind{
+    grid-column: 3 / 4;
+    grid-row: 1;
+}
+
+#inputLatitude{
+    grid-row: 2;
+}
+
+#inputLongitude{
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+
+#selectMonths{
+    grid-column: 3 / 4;
+    grid-row: 2;
+}
+
+label{
+    font-weight: bold;
+}
+
+input, select{
+    width: 100%;
+    background-color: #F5F5F5;
+    border: none;
+    border-bottom: 2px solid lightgray;
+    font-size: 14px;
+}
+
+input:focus, select:focus{
+    outline: none;
+    border-bottom: 2px solid #0b5ed7;
+}
+
+.action{
+    display: flex;
+    justify-content: space-around;
+    grid-column: 1 / 4;
+}
+
+.btn-outline-danger, .btn-outline-primary{
+    border: none;
+}
+
+#togglerFavourite::before{
+    bottom: 87%;
+    margin-left: 60%;
+}
+
+#buttonProfile{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F5;
+}
+
+#togglerProfile::before{
+    bottom: 85%;
+    margin-left: 65%;
+}
+
+.btn-light{
+    background-color: #F5F5F5;
+    border: none;
+}
+
+.fa-sign-out{
+    font-size: 30px
+}
+
+#hedearMobile{
+    display: none;
+}
+
+#navigation{
+    padding: 20px;
+}
+
+#buttonOptions{
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border: none;
+    border-radius: 15%;
+}
+
+.fa-bars{
+    font-size: 25px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px){
+
+    .header{
+        display: none;
+        padding: 0;
+    }
+
+    #hedearMobile{
+        display: block;
+    }
+
+    .toggler{
+        top: 60px;
+        right: 0px;
+        margin: 40px 20px 20px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+
+}
