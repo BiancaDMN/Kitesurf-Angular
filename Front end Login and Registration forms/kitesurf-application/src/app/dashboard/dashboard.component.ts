@@ -92,37 +92,3 @@ export class DashboardComponent {
 
   }
 }
-
-
-
-  // togglerMenu() {
-
-  //   this.isAddOpened = !this.isMenuOpened;
-  //   this.isFavouriteOpened = !this.isFavouriteOpened;
-  //   this.isProfileOpened = !this.isProfileOpened;
-  //   this.isMenuOpened = !this.isMenuOpened;
-  //   this.isMobileAddOpened = !this.isMobileAddOpened;
-  //   this.isMobileFavouriteOpened = !this.isMobileFavouriteOpened;
-  
-  // }
-  
-  // clickedOutsideMenu(){
-  
-  //   this.isAddOpened = false;
-  //   this.isFavouriteOpened = false;
-  //   this.isProfileOpened = false;
-  
-  // }
-  
-  // logout(){
-  
-  //   this.router.navigate(['/login']);
-  
-  // }
-  
-  // cancel(){
-  
-  //   this.isMobileAddOpened = false;
-  //   this.isMobileFavouriteOpened = false;
-  
-  // }
