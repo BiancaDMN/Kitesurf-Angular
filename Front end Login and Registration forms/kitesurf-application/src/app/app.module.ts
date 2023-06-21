@@ -9,6 +9,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ClickedOutsideDirective } from './clicked-outside.directive';
+import { MapComponent } from './map/map.component';
+import { MarkerService } from './marker.service';
+import { PopupService } from './popup.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,8 @@ import { ClickedOutsideDirective } from './clicked-outside.directive';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    ClickedOutsideDirective
+    ClickedOutsideDirective,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,10 @@ import { ClickedOutsideDirective } from './clicked-outside.directive';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    MarkerService,
+    PopupService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
