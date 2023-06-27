@@ -6,7 +6,7 @@
 
   <div class="loginRegisterContainer">
 
-    <form class="loginForm">
+    <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
 
       <h3>Kite</h3>
 
@@ -15,21 +15,23 @@
       <div class="form-group">
         <label>Email address</label>
         <i class="far fa-envelope"></i>
-        <input type="email"  [(ngModel)]="email" [ngModelOptions]="{standalone: true}"  class="form-control" placeholder="Email">
+        <input type="email" class="form-control" name="email" [(ngModel)]="userModel.email" #email="ngModel" [class.is-invalid]="email.invalid && email.touched" placeholder="Email" required>
+        <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required</small>
       </div>
-
+    
       <br>
-
+    
       <div class="form-group">
         <label>Password</label>
         <i class="fas fa-lock"></i>
-        <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Password">
+        <input type="password" class="form-control" name="password" [(ngModel)]="userModel.password" #password="ngModel" [class.is-invalid]="password.invalid && password.touched" placeholder="Password" required>
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Email is required</small>
       </div>
-
+    
       <br>
-
-      <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
-
+    
+      <button type="submit" class="btn btn-primary">Login</button>
+    
     </form>
 
     <div class="register">

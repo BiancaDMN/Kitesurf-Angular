@@ -1,0 +1,56 @@
+.header{
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    margin: 0;
+    font-size: 50px;
+    font-family: 'Caveat';
+}
+
+.image{
+    width: 30px;
+    height: 25px;
+}
+
+.toggler{
+    top: 50px;
+    right: 10px;
+    margin: 40px 20px 20px;
+    padding: 10px;
+    border-radius: 15px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    background-color: lightgray
+}
+
+.menu-opened{
+    background-color: #F5F5F5;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#buttonOptions{
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border: none;
+    border-radius: 15%;
+}
+
+.fa-bars{
+    font-size: 25px;
+}
+
+.btn-outline-danger{
+    border: none;
+}

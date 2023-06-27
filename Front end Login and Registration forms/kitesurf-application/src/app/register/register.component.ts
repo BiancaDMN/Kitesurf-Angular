@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Register } from './register';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -9,27 +10,15 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent{
 
-  firstname: string ='';
-  lastname: string ='';
-  email: string ='';
-  password: string ='';
+  registerModel = new Register ('', '', '', '');
 
   constructor(private http: HttpClient, private router: Router) {}
- 
+
   ngOnInit(): void {}
   
-  register(){
+  onSubmit(){
 
-    let bodyData = {
-
-      "firstname" : this.firstname,
-      "lastname" : this.lastname,
-      "email" : this.email,
-      "password" : this.password,
-
-    };
-
-    this.http.post("http://localhost:3000/user/create",bodyData).subscribe((resultData: any) =>{
+    this.http.post("http://localhost:3000/user/create", this.registerModel).subscribe((resultData: any) =>{
 
       console.log(resultData);
       alert("User Registered Successfully");
@@ -41,7 +30,7 @@ export class RegisterComponent{
  
   save(){
 
-    this.register();
+    this.onSubmit();
 
   }
   

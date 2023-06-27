@@ -1,0 +1,15 @@
+<div class="header-menu" clickOutside (clickOutside)="clickedOutsideFavourite()">
+
+    <button class="btn btn-primary" (click)="togglerFavourite()">
+        Favourite Spots
+    </button>
+
+    <div class="toggler" id="togglerFavourite" *ngIf="isFavouriteOpened">
+
+        <div class="menu-opened">
+            <h3>No favourite spot in your list</h3>
+        </div>
+
+    </div>
+
+</div>

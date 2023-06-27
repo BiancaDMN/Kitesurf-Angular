@@ -1,0 +1,28 @@
+.header{
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    margin: 0;
+    font-size: 50px;
+    font-family: 'Caveat';
+}
+
+.header-right{
+    display: flex;
+    gap: 10px;
+}
+
+.btn-primary{
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease;
+}
+
+button:hover{
+    opacity: 0.8;
+}
